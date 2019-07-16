@@ -6,5 +6,19 @@ module.exports = {
   accepts: ['image/png', 'image/jpeg'],
   extensions: ['png', 'jpg', 'jpeg'],
   process: 'main',
-  main: './lib'
+  main: './lib',
+  options: [
+    {
+      name: 'api-key',
+      label: 'API Key',
+      type: 'input',
+      helperText: '如何获取API Key?',
+      helperLink: 'https://repic.app/support/tiny-png-key.html',
+      value: 'asdasdasd',
+      props: {
+        maxLength: 32,
+        placeholder: '填写API Key',
+      }
+    }
+  ]
 }
