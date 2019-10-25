@@ -14,7 +14,7 @@ module.exports = {
       type: 'input',
       helperText: '如何获取API Key?',
       helperLink: 'https://repic.app/support/tiny-png-key.html',
-      value: 'asdasdasd',
+      value: '',
       props: {
         maxLength: 32,
         placeholder: '填写API Key',
