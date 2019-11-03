@@ -7,6 +7,20 @@ module.exports = {
   extensions: ['png', 'jpg', 'jpeg'],
   process: 'main',
   main: './lib',
+  postinstall: ({ showMessageBox, openLink, showPluginOptions }) => {
+    showMessageBox({
+      message: 'TinyPng插件安装成功，是否现在去填写API Key？',
+      detail: '请前往https://tinypng.com获取API Key',
+      defaultId: 0,
+      buttons: ['确定', '获取Key', '取消'],
+    }, (index) => {
+      if (index === 0) {
+        showPluginOptions()
+      } else if (index === 1) {
+        openLink('https://tinypng.com/developers')
+      }
+    })
+  },
   options: [
     {
       name: 'api-key',
