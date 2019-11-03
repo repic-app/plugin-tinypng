@@ -9,10 +9,10 @@ module.exports = {
   main: './lib',
   postinstall: ({ showMessageBox, openLink, showPluginOptions }) => {
     showMessageBox({
-      message: 'TinyPng插件安装成功，是否现在去填写API Key？',
-      detail: '请前往https://tinypng.com获取API Key',
+      message: 'TinyPng插件安装成功',
+      detail: '请前往https://tinypng.com获取Key',
       defaultId: 0,
-      buttons: ['确定', '获取Key', '取消'],
+      buttons: ['配置Key', '获取Key', '取消'],
     }, (index) => {
       if (index === 0) {
         showPluginOptions()
